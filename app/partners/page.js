@@ -53,11 +53,3 @@ export default function PartnersPage() {
     </>
   );
 }
-
-x
-
-
-<a className="stackLink" href="/deployment-readiness">Deployment readiness 
-→</a>
-'
-
