@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Layeready</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #e5e5e5;
+            background: #1a1a1a;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #e5e5e5;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+            letter-spacing: -0.01em;
+        }
+        
+        .nav-links a:hover {
+            color: #e5e5e5;
+        }
+        
+        .hero {
+            padding: 6rem 5% 5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            color: #fff;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: #999;
+            max-width: 700px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        
+        .section {
+            padding: 4rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            letter-spacing: -0.02em;
+            color: #fff;
+        }
+        
+        .founder-card {
+            margin-bottom: 4rem;
+        }
+        
+        .founder-header {
+            margin-bottom: 2.5rem;
+        }
+        
+        .founder-name {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            color: #fff;
+        }
+        
+        .founder-title {
+            font-size: 1.05rem;
+            color: #999;
+            margin-bottom: 1rem;
+        }
+        
+        .founder-linkedin {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        
+        .founder-linkedin:hover {
+            color: #999;
+        }
+        
+        .bio {
+            margin-bottom: 2.5rem;
+        }
+        
+        .bio h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            color: #fff;
+        }
+        
+        .bio p {
+            margin-bottom: 1.5rem;
+            color: #999;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+        
+        .highlight {
+            border-top: 1px solid #333;
+            padding-top: 1.5rem;
+        }
+        
+        .highlight h4 {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: #fff;
+        }
+        
+        .highlight p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin: 4rem 0;
+            padding: 3rem 0;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .vision {
+            margin: 4rem 0;
+        }
+        
+        .vision h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            color: #fff;
+        }
+        
+        .vision p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #999;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta {
+            padding: 5rem 5%;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            color: #fff;
+        }
+        
+        .cta p {
+            font-size: 1rem;
+            color: #999;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.9rem 1.8rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            display: inline-block;
+            letter-spacing: -0.01em;
+        }
+        
+        .btn-primary {
+            background: #fff;
+            color: #1a1a1a;
+            border: 1px solid #fff;
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: #fff;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #999;
+            border: 1px solid #333;
+        }
+        
+        .btn-secondary:hover {
+            border-color: #666;
+            color: #e5e5e5;
+        }
+        
+        footer {
+            padding: 3rem 5%;
+            border-top: 1px solid #333;
+            margin-top: 5rem;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #e5e5e5;
+        }
+        
+        .footer-tagline {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .footer-right {
+            text-align: right;
+        }
+        
+        .footer-right a {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        
+        .footer-right a:hover {
+            color: #e5e5e5;
+        }
+        
+        .footer-right p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .footer-right {
+                text-align: center;
+            }
+            
+            .highlights {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">Layeready</a>
+        <ul class="nav-links">
+            <li><a href="/#offerings">Offerings</a></li>
+            <li><a href="/site-vetting/">Site vetting</a></li>
+            <li><a href="/partners/">Partners</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="mailto:info@layeready.com?subject=Capacity%20request">Request capacity</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Building infrastructure<br>for tomorrow's AI.</h1>
+        <p class="hero-subtitle">Led by proven entrepreneurs with deep expertise in technology transformation, financial systems, and enterprise-scale execution.</p>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Leadership</h2>
+        
+        <div class="founder-card">
+            <div class="founder-header">
+                <h3 class="founder-name">Ken Patel</h3>
+                <p class="founder-title">Founder & Chief Executive Officer</p>
+                <a href="https://www.linkedin.com/in/ken-patel-bb0968123" target="_blank" class="founder-linkedin">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    LinkedIn Profile
+                </a>
+            </div>
+            
+            <div class="bio">
+                <h3>Serial Entrepreneur & Technology Visionary</h3>
+                <p>Ken Patel brings over 15 years of entrepreneurial leadership and technology transformation expertise to Layeready. As a serial entrepreneur with a proven track record of building, scaling, and successfully exiting ventures across multiple high-growth sectors, Ken embodies the operational excellence and strategic vision essential for institutional-grade infrastructure development.</p>
+                
+                <p>His entrepreneurial journey spans financial technology, enterprise systems, and global consulting, with demonstrated success in identifying market opportunities, building strategic partnerships with tier-one institutions, and executing complex technology initiatives at scale.</p>
+            </div>
+            
+            <div class="highlights">
+                <div class="highlight">
+                    <h4>M&A Experience</h4>
+                    <p>Instrumental in acquisition negotiations for a NYC-based travel and reservation startup, successfully acquired by a leading travel platform</p>
+                </div>
+                
+                <div class="highlight">
+                    <h4>Global Banking Partnerships</h4>
+                    <p>Built and nurtured partnerships with Standard Chartered, ANZ, ABN Amro, and Citibank in the competitive Mumbai financial services market</p>
+                </div>
+                
+                <div class="highlight">
+                    <h4>Enterprise Transformation</h4>
+                    <p>Led global transformation projects for Fortune 500 clients including Coca-Cola, PepsiCo, Textron, and M&S while representing IBM and Accenture</p>
+                </div>
+                
+                <div class="highlight">
+                    <h4>Financial Services Expertise</h4>
+                    <p>8 years developing a startup into a top-tier financial and loan servicing firm in the mortgage and home loan market</p>
+                </div>
+                
+                <div class="highlight">
+                    <h4>Technical Depth</h4>
+                    <p>Deep expertise in IT architecture, system design, and technology infrastructure with engineering degree from Mumbai University</p>
+                </div>
+                
+                <div class="highlight">
+                    <h4>Strategic Operational Leadership</h4>
+                    <p>Proven ability in vendor negotiations, change management, and financial/operational management at enterprise scale</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div>
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Years Technology Leadership</div>
+            </div>
+            <div>
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Successful Ventures Built</div>
+            </div>
+            <div>
+                <div class="stat-number">$B</div>
+                <div class="stat-label">Value in Client Projects Delivered</div>
+            </div>
+            <div>
+                <div class="stat-number">Global</div>
+                <div class="stat-label">Fortune 500 Client Base</div>
+            </div>
+        </div>
+
+        <div class="vision">
+            <h2>Powering the AI Revolution</h2>
+            <p>The explosive growth of AI compute demands a fundamental rethinking of data center infrastructure. Layeready is positioned at the intersection of this unprecedented opportunity, leveraging proven entrepreneurial execution and deep technical expertise to retrofit and deploy AI-optimized data centers in the critical 10-25 MW power range.</p>
+            <p>We're building the essential infrastructure backbone for the next generation of AI applications, combining strategic site selection, rapid deployment capability, and institutional-grade partnerships to capture this multi-billion dollar market opportunity.</p>
+        </div>
+
+        <h2 class="section-title">Why Institutional Partners Choose Layeready</h2>
+        
+        <div class="highlights">
+            <div class="highlight">
+                <h4>Proven Track Record</h4>
+                <p>Leadership with demonstrated success in building and scaling ventures across multiple successful exits and M&A transactions</p>
+            </div>
+            
+            <div class="highlight">
+                <h4>Market Timing</h4>
+                <p>Positioned in the exploding AI infrastructure market with global AI data center capacity projected to reach $300B+ by 2030</p>
+            </div>
+            
+            <div class="highlight">
+                <h4>Institutional Relationships</h4>
+                <p>Deep network across global banking, technology, and infrastructure sectors with proven ability to secure enterprise partnerships</p>
+            </div>
+            
+            <div class="highlight">
+                <h4>Operational Excellence</h4>
+                <p>Demonstrated capability executing complex, multi-stakeholder technology infrastructure projects at Fortune 500 scale</p>
+            </div>
+            
+            <div class="highlight">
+                <h4>Financial Acumen</h4>
+                <p>Extensive experience in financial services, capital formation, and strategic negotiations with institutional investors</p>
+            </div>
+            
+            <div class="highlight">
+                <h4>Scalable Business Model</h4>
+                <p>Focused on the critical 10-25 MW segment with clear path to rapid deployment and revenue generation</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Build the Future with Us</h2>
+        <p>We're seeking strategic partners and institutional investors to accelerate AI infrastructure deployment.</p>
+        <div class="cta-buttons">
+            <a href="mailto:info@layeready.com?subject=Strategic%20Partnership%20Inquiry" class="btn btn-primary">Connect With Us</a>
+            <a href="/partners/" class="btn btn-secondary">View Partnerships</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-logo">Layeready</div>
+                <p class="footer-tagline">Built for what comes next.</p>
+            </div>
+            <div class="footer-right">
+                <a href="mailto:info@layeready.com">info@layeready.com</a>
+                <p>© 2025</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
