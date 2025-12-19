@@ -1,5 +1,12 @@
 const steps = [
-  { t: "Assess", d: "Site, power, timeline, constraints, and deployment posture." },
+  { t: "Align", d: "Clarify the target workload, constraints, and 
+readiness expectations." },
+  { t: "Design", d: "Define a modular stack and an execution plan that can 
+expand over time." },
+  { t: "Execute", d: "Coordinate delivery, commissioning readiness, and a 
+clean ramp path." },
+];  { t: "Assess", d: "Site, power, timeline, 
+constraints, and deployment posture." },
   { t: "Design", d: "Stack architecture, vendor pathways, scale plan, and readiness targets." },
   { t: "Deliver", d: "Commissioning, operational readiness, and expansion roadmap." },
 ];
