@@ -8,9 +8,9 @@ export default function Nav() {
           <span className="brandMark" aria-hidden="true" />
           <span>Layeready</span>
         </Link>
-
         <nav className="navLinks" aria-label="Primary">
           <Link href="/#offerings">Offerings</Link>
+          <Link href="/about">About</Link>
           <Link href="/site-vetting">Site vetting</Link>
           <Link href="/partners">Partners</Link>
           <a
