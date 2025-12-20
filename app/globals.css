@@ -293,3 +293,28 @@ a:hover{ color:var(--text); }
   .grid2 > .card{ grid-column: span 12; }
   .navLinks{ gap: 12px; }
 }
+
+/* HubSpot form - dark background compatibility */
+.hs-form-frame,
+.hs-form-frame * {
+  color: #fff !important;
+}
+
+.hs-form-frame label,
+.hs-form-frame .hs-form-field label {
+  color: #fff !important;
+}
+
+.hs-form-frame input,
+.hs-form-frame select,
+.hs-form-frame textarea {
+  background: transparent !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.35) !important;
+}
+
+.hs-form-frame input::placeholder,
+.hs-form-frame textarea::placeholder {
+  color: rgba(255,255,255,0.6) !important;
+}
+
